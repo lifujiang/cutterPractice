@@ -1,5 +1,6 @@
 <template>
-  <div class="cateCardCPNT">
+<!-- 设置 id 增加权重 -->
+  <div :id="active ? 'cateActive' : ''" class="cateCardCPNT">
     <div class="top">
       <article class="word">
         <span class="keyword">{{ cateData.title }}</span>
@@ -8,7 +9,7 @@
       <img src="../images/arrow_right.png" alt="arrow_right">
     </div>
     <div class="bottom">
-      <span v-for="(item, index) in cateData.msg" :key="index">
+      <span v-for="(item, index) in cateData.info" :key="index">
         {{ item }}
       </span>
     </div>
@@ -17,7 +18,7 @@
 
 <script>
 export default {
-  props: ['data'],
+  props: ['data', 'active'],
   data () {
     return {
       cateData: this.data
@@ -60,6 +61,20 @@ export default {
       padding-bottom: 11px;
       font-size: 12px;
       color: #c2d9f8;
+    }
+  }
+  #cateActive {
+    background-color: #fff;
+    border: 1px solid #4593fd;
+    border-right: none;
+    color: #252525;
+    .top {
+      .tag {
+        color: white;
+      }
+    }
+    .bottom {
+      color: black;
     }
   }
 </style>

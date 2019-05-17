@@ -1,17 +1,43 @@
 <template>
-  <div class="cateCardCPNT">
-    <div class="top">
-      <article class="word">
-        <span class="keyword">手机 数码</span>
-        <span class="tag">合约机</span>
+  <div class="goodsCPNT">
+    <header class="goodsHeader">
+      <article class="left">
+        <img src="../images/icon1.png" alt="leibie">
+        <span class="word">家用电脑</span>
       </article>
-      <img src="../images/arrow_right.png" alt="arrow_right">
-    </div>
-    <div class="bottom">
-      <span>荣耀3X</span>
-      <span>单反</span>
-      <span>智能设备</span>
-    </div>
+      <span class="right">更多>></span>
+    </header>
+    <main class="goodsMain">
+      <aside class="AD">
+        <img src="../images/ad1.png" alt="">
+      </aside>
+      <article class="content">
+        <ul class="mainGoods">
+          <li>
+            <img src="../images/HTC.png" alt="htc">
+            <p>HTC新渴望8系列</p>
+            <p class="price">1899元</p>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="subGoods">
+          <li>
+            <div class="box">
+              <img src="../images/NFC.png" alt="NFC">
+              <article class="info">
+                <p>NFC技术一碰轻松配对!接触屏幕</p>
+                <p>&yen;<span class="price">149.00</span></p>
+              </article>
+            </div>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </article>
+    </main>
   </div>
 </template>
 
@@ -22,39 +48,102 @@ export default {
 </script>
 
 <style lang="scss">
-  .cateCardCPNT {
-    width: 190px;
-    height: 65px;
-    background-color: #4593fd;
-    color: #fff;
-    border-top: 1px solid #5aa1fe;
-    padding-left: 10px;
-    border-bottom: 1px solid #3487f2;
-    .top {
+  .goodsCPNT {
+    height: 475px;
+    width: 1000px;
+    .goodsHeader {
+      width: 100%;
+      height: 75px;
+      padding-right: 23px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding-top: 11px;
-      padding-right: 13px;
-      margin-bottom: 2px;
-      .keyword {
-        font-size: 13px;
+      font-size: 12px;
+      .left {
+        display: flex;
+        align-items: center;
+        .word {
+          margin-left: 12px;
+          font-size: 20px;
+        }
       }
-      .tag {
-        display: inline-block;
-        margin-left: 3px;
-        font-size: 12px;
-        width: 48px;
-        height: 20px;
-        line-height: 20px;
-        text-align: center;
-        background: url('../images/blue_circle.png');
+      .right {
+        line-height: 105px;
       }
     }
-    .bottom {
-      padding-bottom: 11px;
-      font-size: 12px;
-      color: #c2d9f8;
+    .goodsMain {
+      display: flex;
+      width: 100%;
+      height: 400px;
+      .AD {
+        width: 190px;
+        height: 100%;
+      }
+      .content {
+        width: 810px;
+        height: 100%;
+        border-bottom: 2px solid #ff7201;
+        border-top: 1px solid #cccccc;
+        border-right: 1px solid #cccccc;
+        .mainGoods {
+          width: 810px;
+          height: 280px;
+          li {
+            width: 25%;
+            height: 100%;
+            float: left;
+            border-bottom: 1px solid #e5e5e5;
+            padding-top: 45px;
+            &:not(:last-of-type) {
+              border-right: 1px solid #e5e5e5;
+            }
+            img {
+              display: block;
+              margin: 0 auto;
+              margin-bottom: 25px;
+            }
+            p {
+              text-align: center;
+            }
+            .price {
+              font-size: 12px;
+              color: #ff7300;
+            }
+          }
+        }
+        .subGoods {
+          width: 810px;
+          height: 120px;
+          li {
+            width: 25%;
+            height: 100%;
+            float: left;
+            font-size: 12px;
+            &:not(:last-of-type) {
+              border-right: 1px solid #e5e5e5;
+            }
+            display: flex;
+            align-items: center;
+            .box {
+              margin: 0 auto;
+              display: flex;
+              img {
+                margin-right: 10px;
+              }
+              .info {
+                width: 90px;
+                height: 50px;
+                p {
+                  white-space: normal;
+                  margin-bottom: 4px;
+                  .price {
+                    font-size: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 </style>
