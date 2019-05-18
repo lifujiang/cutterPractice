@@ -267,31 +267,5 @@ export default {
         }
       }
     }
-    footer {
-      width: 100%;
-      height: 223px;
-      background-color: #d4d4d4;
-      display: flex;
-      align-items: center;
-      .box {
-        width: 100%;
-        text-align: center;
-        .word {
-          margin: 0 auto;
-          margin-bottom: 35px;
-          font-size: 13px;
-          p {
-            margin-bottom: 10px;
-          }
-        }
-        .credit {
-          display: inline-block;
-          li {
-            float: left;
-            margin-left: 23px;
-          }
-        }
-      }
-    }
   }
 </style>
