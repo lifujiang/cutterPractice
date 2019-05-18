@@ -58,7 +58,6 @@ export default {
         foods: require('../images/foods.png'),
         icon1: require('../images/icon1.png')
       }
-      console.log(imgList[img])
       return imgList[img]
     }
   },
