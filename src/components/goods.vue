@@ -2,39 +2,33 @@
   <div class="goodsCPNT">
     <header class="goodsHeader">
       <article class="left">
-        <img src="../images/icon1.png" alt="leibie">
-        <span class="word">家用电脑</span>
+        <img :src="handleImg(goodsListData.title_icon)" alt="leibie">
+        <span class="word">{{ goodsListData.title }}</span>
       </article>
       <span class="right">更多>></span>
     </header>
     <main class="goodsMain">
       <aside class="AD">
-        <img src="../images/ad1.png" alt="">
+        <img :src="handleImg(goodsListData.ad)" alt="">
       </aside>
       <article class="content">
         <ul class="mainGoods">
-          <li>
-            <img src="../images/HTC.png" alt="htc">
-            <p>HTC新渴望8系列</p>
-            <p class="price">1899元</p>
+          <li v-for="(item, index) in goodsListData.maingoods" :key="index">
+            <img :src="handleImg(item.img)" alt="HTC">
+            <p>{{ item.title }}</p>
+            <p class="price">{{ item.price }}</p>
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
         <ul class="subGoods">
-          <li>
+          <li v-for="(item, index) in goodsListData.subgoods" :key="index">
             <div class="box">
-              <img src="../images/NFC.png" alt="NFC">
+              <img :src="handleImg(item.img)" alt="NFC">
               <article class="info">
-                <p>NFC技术一碰轻松配对!接触屏幕</p>
-                <p>&yen;<span class="price">149.00</span></p>
+                <p>{{ item.title }}</p>
+                <p>&yen;<span class="price">{{ item.price }}</span></p>
               </article>
             </div>
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
         </ul>
       </article>
     </main>
@@ -43,7 +37,33 @@
 
 <script>
 export default {
-  
+  props: ['data'],
+  data () {
+    return {
+      goodsListData: this.data,
+      good: ''
+    }
+  },
+  methods: {
+    handleImg (img) {
+      var imgList = {
+        ad1: require('../images/ad1.png'),
+        ad2: require('../images/ad2.png'),
+        Apple: require('../images/Apple.png'),
+        samsung: require('../images/samsung.png'),
+        NFC: require('../images/NFC.png'),
+        ipad: require('../images/ipad.png'),
+        kbt: require('../images/kbt.png'),
+        HTC: require('../images/HTC.png'),
+        foods: require('../images/foods.png'),
+        icon1: require('../images/icon1.png')
+      }
+      console.log(imgList[img])
+      return imgList[img]
+    }
+  },
+  created () {
+  }
 }
 </script>
 
@@ -134,6 +154,7 @@ export default {
                 height: 50px; 
                 p {
                   white-space: normal;
+                  word-break: break-all;
                   margin-bottom: 4px;
                   .price {
                     font-size: 15px;

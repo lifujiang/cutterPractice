@@ -63,12 +63,18 @@
         </section>
       </article>
     </section>
+    <main>
+      <section>
+        <goods v-for="(item, index) in data.goodsList" :key="index" :data="item" />
+      </section>
+    </main>
   </div>
 </template>
 
 <script>
 import cateCard from '../components/cateCard.vue'
 import cateDetail from '../components/cateDetail.vue'
+import goods from '../components/goods.vue'
 
 var cateCardList = [
   {
@@ -123,18 +129,120 @@ var cateDetailList = [
     info: ['音箱', '耳机/耳麦', '麦克风', '声卡', '音频附件', '录音笔']
   }
 ]
+var goodsList = [
+  {
+    ad: 'ad1',
+    title: '家用电脑',
+    title_icon: 'icon1',
+    maingoods: [
+      {
+        img: 'HTC',
+        title: 'HTC新渴望8系列',
+        price: '1899元'
+      },
+      {
+        img: 'HTC',
+        title: 'HTC新渴望9系列',
+        price: '1999元'
+      },
+      {
+        img: 'HTC',
+        title: 'HTC新渴望10系列',
+        price: '2099元'
+      },
+      {
+        img: 'HTC',
+        title: 'HTC新渴望11系列',
+        price: '2199元'
+      }
+    ],
+    subgoods: [
+      {
+        img: 'NFC',
+        title: 'NFC技术一碰轻松配对!接触屏幕',
+        price: '149.00'
+      },
+      {
+        img:'samsung',
+        title: 'Samsung三星GALAXY Grand2',
+        price: '2000.00'
+      },
+      {
+        img: 'ipad',
+        title: '全网低价 Apple苹果iPad mini1',
+        price: '1888.00'
+      },
+      {
+        img: 'Apple',
+        title: 'Apple苹果 全新Retina屏MacBook',
+        price: '20020.00'
+      }
+    ]
+  },
+  {
+    ad: 'ad2',
+    title: '食品酒水',
+    title_icon: 'icon1',
+    maingoods: [
+      {
+        img: 'foods',
+        title: '三月美食狂享购',
+        price: '50元'
+      },
+      {
+        img: 'foods',
+        title: '四月美食狂享购',
+        price: '60元'
+      },
+      {
+        img: 'foods',
+        title: '五月美食狂享购',
+        price: '60元'
+      },
+      {
+        img: 'foods',
+        title: '六月美食狂享购',
+        price: '70元'
+      }
+    ],
+    subgoods: [
+      {
+        img: 'kbt',
+        title: '康比特 维他保咀嚼片 80片',
+        price: '800.00'
+      },
+      {
+        img: 'kbt',
+        title: '康比特 维他保咀嚼片 40片',
+        price: '400.00'
+      },
+      {
+        img: 'kbt',
+        title: '康比特 维他保咀嚼片 20片',
+        price: '200.00'
+      },
+      {
+        img: 'kbt',
+        title: '康比特 维他保咀嚼片 10片',
+        price: '100.00'
+      }
+    ]
+  }
+]
 export default {
   data () {
     return {
       data: {
         cateCardList: cateCardList,
-        cateDetailList: cateDetailList
+        cateDetailList: cateDetailList,
+        goodsList: goodsList
       }
     }
   },
   components: {
     cateCard,
-    cateDetail
+    cateDetail,
+    goods
   }
 }
 </script>
