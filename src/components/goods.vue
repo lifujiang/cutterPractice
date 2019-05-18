@@ -133,6 +133,7 @@ export default {
         .subGoods {
           width: 810px;
           height: 120px;
+          padding-bottom: 3px;
           li {
             width: 25%;
             height: 100%;
