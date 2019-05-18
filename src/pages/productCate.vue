@@ -18,8 +18,8 @@
         </section>
       </aside>
       <article class="content">
-        <section class="img">
-          <img src="../images/product.png" alt="product">
+        <section>
+          <propagate />
         </section>
         <section class="product" v-for="(item, index) in productData" :key="index">
           <header class="productHeader">
@@ -41,6 +41,7 @@
 
 <script>
 import headerDefault from '../components/header.vue'
+import propagate from '../components/propagate.vue'
 import product from '../components/products.vue'
 import footerDefault from '../components/footer.vue'
  
@@ -200,6 +201,7 @@ export default {
   },
   components: {
     headerDefault,
+    propagate,
     product,
     footerDefault
   },
@@ -261,16 +263,7 @@ export default {
         width: 810px;
         margin-left: 5px;
         .img {
-          height: 325px;
-          width: 810px;
-          background-image: url('../images/swipe.png');
-          background-position: -15px -13px;
-          position: relative;
-          img {
-            position: absolute;
-            top: 12px;
-            left: 55px;
-          }
+          
         }
         .product {
           width: 100%;

@@ -14,7 +14,7 @@ export default {
   .propagatePage {
     height: 325px;
     width: 810px;
-    background-image: url('../images/swipe.png');
+    background-image: url('../images/propagate.png');
     background-position: -15px -13px;
     position: relative;
     img {

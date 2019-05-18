@@ -8,8 +8,8 @@
         <aside class="cateSummary">
           <cate-card v-for="(item, index) in data.cateCardList" :key="index" :data="item" :active="index === 1 ? true : false" />
         </aside>
-        <section class="swipe">
-          <img src="../images/swipe.png" alt="swipe">
+        <section>
+          <propagate />
         </section>
         <article class="cateDetail">
           <cate-detail v-for="(item, index) in data.cateDetailList" :key="index" :data="item" />
@@ -37,6 +37,7 @@
 
 <script>
 import headerDefault from '../components/header.vue'
+import propagate from '../components/propagate.vue'
 import cateCard from '../components/cateCard.vue'
 import cateDetail from '../components/cateDetail.vue'
 import goods from '../components/goods.vue'
@@ -207,6 +208,7 @@ export default {
   },
   components: {
     headerDefault,
+    propagate,
     cateCard,
     cateDetail,
     goods,
@@ -229,12 +231,6 @@ export default {
         .cateSummary {
           width: 190px;
           height: 100%;
-        }
-        .swipe {
-          img {
-            width: 810px;
-            height: 325px;
-          }
         }
         .cateDetail {
           width: 570px;
