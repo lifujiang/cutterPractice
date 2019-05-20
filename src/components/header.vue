@@ -10,7 +10,9 @@
       </p>
     </header>
     <section class="searchBox">
-      <img src="../images/logo.png" alt="logo" class="logo">
+      <router-link to="/">
+        <img src="../images/logo.png" alt="logo" class="logo">
+      </router-link>
       <section class="search">
         <input type="text" class="input">
         <button class="btn">搜索</button>
@@ -33,7 +35,9 @@
       </section>
       <section class="cateTitle">
         <ul class="clearFix">
-          <li class="active">数码城</li>
+          <li class="active">
+            <router-link to="/product">数码城</router-link>
+          </li>
           <li>天黑黑</li>
           <li>团购</li>
           <li>发现</li>
@@ -47,7 +51,8 @@
 
 <script>
 export default {
-  
+  methods: {
+  }
 }
 </script>
 

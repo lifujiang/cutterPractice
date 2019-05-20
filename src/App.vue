@@ -36,7 +36,9 @@ ol{
 
 a{
   text-decoration: none;
+  color: white;
 }
+
 
 input,
 areatext,

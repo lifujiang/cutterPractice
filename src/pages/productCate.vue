@@ -273,7 +273,7 @@ export default {
             height: 35px;
             display: flex;
             line-height: 35px;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 2px solid #ccc;
             position: relative;
             margin-bottom: 15px;
             // 利用伪元素遮盖底边框实现前半部边框颜色的改变
@@ -281,9 +281,9 @@ export default {
               content: '';
               position: absolute;
               width: 180px;
-              height: 1px;
+              height: 2px;
               background-color: #096dba;
-              bottom: -1px;
+              bottom: -2px;
             }
             .productTitle {
               padding-left: 10px;
